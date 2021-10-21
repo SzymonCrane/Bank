@@ -15,7 +15,7 @@ namespace Bank
         }
         public static long GetBalance()
         {
-            var balance = string.Format("{0}PLN", Balance);
+            var balance = string.Format("{0} PLN", Balance);
             return balance
         }
         public static long GenerateAccountNumber(int Id)
