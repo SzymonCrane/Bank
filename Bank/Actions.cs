@@ -16,9 +16,10 @@ namespace Bank
         {
             return oldBalance + changeBalance;
         }
-        public static int GenerateAccountNumber(int Id)
+        public static long GenerateAccountNumber(int Id)
         {
-            return AccountNumber;
+            var accountNumber = Id;
+            return accountNumber;
         }
     }
 }
