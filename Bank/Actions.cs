@@ -23,5 +23,9 @@ namespace Bank
             var accountNumber = Id;
             return accountNumber;
         }
+        public void ChangeBalance(decimal value)
+        {
+            Balance += value;
+        }
     }
 }
