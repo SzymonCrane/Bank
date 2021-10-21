@@ -10,11 +10,13 @@ namespace Bank
     {
         public static string GetFullName(string ClientFirstName, string ClientLastName)
         {
-            return ClientFirstName + ClientLastName ;
+            var fullName = string.Format("{0} {1}", ClientFirstName, ClientLastName);
+            return ;
         }
-        public static long GetBalance(long oldBalance,long changeBalance)
+        public static long GetBalance()
         {
-            return oldBalance + changeBalance;
+            var balance = string.Format("{0}PLN", Balance);
+            return balance
         }
         public static long GenerateAccountNumber(int Id)
         {
