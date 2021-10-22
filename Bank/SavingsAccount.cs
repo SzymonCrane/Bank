@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace Bank
 {
-    public class SavingsAccount : Account
+    class SavingsAccount : Account
     {
-
-    public int Id { get; set; }
-    public long AccountNumber { get; set; }
-    public long Pesel { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    
-        public static SetInterest()
+    public SavingsAccount(int id, long pesel, string firstname, string lastname) : base (id, firstname, lastname, pesel)
         {
-            return Interest;
+        }
+        
+
+        public void SetInterest(decimal interest)
+        {
+            Balance += Balance * interest;
+        }
+        public abstract string TypeName()
+        {
+            return "Oszczędnościowe";
         }
     }
 }

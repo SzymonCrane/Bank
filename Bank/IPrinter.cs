@@ -8,6 +8,6 @@ namespace Bank
 {
     public interface IPrinter
     {
-        void Printer();
+        void Printer(Account account);
     }
 }
