@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Bank
+﻿namespace Bank
 {
     class Program
     {
@@ -30,7 +28,7 @@ namespace Bank
             * - Method ChangeBalance takes amount wihch has to change acc balance
             * - GenerateAccountNumber which takes account ID
             * - Savings Account - child of Account, has methods: SetInterest and TypeName
-            * - Billing Account - child of Account, has TakeCharche and TypeName
+            * - Billing Account - child of Account, has TakeCharge and TypeName
             * - AccountsManager - Takes list of opened accounts in one place:
             * *CreateBillingAccount, CreateSavingAccount, GetAllAccounts, GetAccountsFor, GetAccount, ListOfCustomers,
             *  CloseMonth(takes 5PLN for having an account), AddMoney, Deposit, Withdraw, GenerateId
@@ -39,20 +37,9 @@ namespace Bank
             * Create methods: Run(is responsible for management of our program), PrintMainMenu,
             * ListOfAccounts, CustomerData, AddBillingAccount, AddSavingsAccount.
             */
-        
-            Console.Write("Welcome in Bank Manager APP\nHere is some options you can choose from:");
-            Console.WriteLine("1 - Client's account list");
-            Console.WriteLine("2 - Billing account");
-            Console.WriteLine("3 - Saving account");
-            Console.WriteLine("4 - Get money into account");
-            Console.WriteLine("5 - Take money from account");
-            Console.WriteLine("6 - List of clients");
-            Console.WriteLine("7 - All accounts");
-            Console.WriteLine("8 - End month");
-            Console.WriteLine("9 - Done");
 
-            var run = BankManager.Run(Int32.Parse(Console.ReadLine()));
-                
+            BankManager bankManager = new BankManager();
+            bankManager.Run();
         }
     }
 }
