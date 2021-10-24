@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bank
+﻿namespace Bank
 {
-    class BillingAccount : Account
+    public class BillingAccount : Account
     {
-        public BillingAccount(int id, long pesel, string firstname, string lastname) : base (id, firstname, lastname, pesel)
+        public BillingAccount(int id,  string firstname, string lastname, long pesel) : base (id, firstname, lastname, pesel)
         {
         }
         public void TakeCharge(decimal value)
         {
             Balance -= value;
         }
-        public abstract string TypeName()
+        public override string TypeName()
         {
             return "Rozliczeniowe";
         }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bank
+﻿namespace Bank
 {
     public abstract class Account
     {
@@ -14,16 +8,17 @@ namespace Bank
         public long Pesel { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public Account(int id, int accountnumber, decimal balance, long pesel, string firstname, string lastname)
+        public Account(int id, string firstname, string lastname, long pesel)
         {
             Id = id;
-            AccountNumber = accountnumber;
+            AccountNumber = GenerateAccountNumber(id);
             Balance = 0.0M;
             Pesel = pesel;
             FirstName = firstname;
             LastName = lastname;
 
         }
+        public abstract string TypeName();
         public string GetFullName()
         {
             var fullName = string.Format("{0} {1}", FirstName, LastName);

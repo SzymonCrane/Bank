@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bank
+﻿namespace Bank
 {
     public interface IPrinter
     {
-        void Printer(Account account);
+        void Print(Account account);
     }
 }
