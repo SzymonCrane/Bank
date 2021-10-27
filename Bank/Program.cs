@@ -1,4 +1,5 @@
-﻿namespace Bank
+﻿using System;
+namespace Bank
 {
     class Program
     {
@@ -39,7 +40,21 @@
             */
 
             BankManager bankManager = new BankManager();
-            bankManager.Run();
+            LoginSystem loginSystem = new LoginSystem();
+
+            Console.WriteLine("Zaloguj się w naszym systemie\n Wprowadź login: ");
+            var username = Console.ReadLine();
+            Console.WriteLine("Wprowadź hasło: ");
+            var password = Console.ReadLine();
+            
+
+            if (loginSystem.LoginIsCorrect(username, password) == true){
+                bankManager.Run();
+            }
+            else
+            {
+                Console.WriteLine("Taki użytkownik nie istnieje!");
+            }
         }
     }
 }
