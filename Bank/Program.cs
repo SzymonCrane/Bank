@@ -40,11 +40,15 @@ namespace Bank
             */
 
             BankManager bankManager = new BankManager();
+            LoginSystem loginSystem = new LoginSystem();
+
             Console.WriteLine("Zaloguj się w naszym systemie\n Wprowadź login: ");
             var username = Console.ReadLine();
             Console.WriteLine("Wprowadź hasło: ");
             var password = Console.ReadLine();
-            if(LoginSystem.LoginIsCorrect(username, password) == true){
+            
+
+            if (loginSystem.LoginIsCorrect(username, password) == true){
                 bankManager.Run();
             }
             else
