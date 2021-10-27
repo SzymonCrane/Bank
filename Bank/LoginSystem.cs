@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Bank
 {
-    public class LoginSystem
+    public class LoginSystem 
     {
         public string UserName { get; set; }
         public string UserPassword { get; set; }
